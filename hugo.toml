@@ -1,0 +1,59 @@
+baseURL = "https://haotan.me/"
+languageCode = "en-us"
+title = "Hao Tan"
+theme = "haotan"
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  description = "Personal website of Hao Tan — PhD in Computer Science, specializing in Deep Learning Model Fusion and Multi-Task Learning."
+  author = "Hao Tan"
+  chineseName = "谭浩"
+  role = "PhD Candidate in Computer Science"
+  affiliation = "University of Leeds"
+  profileImage = "/images/profile.jpg"
+  resumeEN = "/pdf/resume-en.pdf"
+  resumeCN = "/pdf/resume-cn.pdf"
+  email = "tanbox@live.com"
+  github = "haotan1998"
+  linkedin = "haotan1998"
+  orcid = "0000-0002-9489-6543"
+  googleScholar = "https://scholar.google.com/citations?user=Dad3F3AAAAAJ&hl=en"
+
+  aboutText = """Currently, I am a Ph.D. candidate with the School of Computer Science at the University of Leeds, UK with expected graduation in July 2026, specializing in Deep Learning Model Fusion and Multi-Task Learning. I received the B.Eng. degree in Computer Science and Engineering from Southern University of Science and Technology (SUSTech), China in 2020. Prior to my doctoral studies, I researched in Neural Architecture Search and evolutionary computation at SUSTech. I am deep into AI applications and finance investment."""
+
+[[menus.main]]
+  name = "About"
+  url = "#about"
+  weight = 1
+
+[[menus.main]]
+  name = "Education"
+  url = "#education"
+  weight = 2
+
+[[menus.main]]
+  name = "Experience"
+  url = "#experience"
+  weight = 3
+
+[[menus.main]]
+  name = "Publications"
+  url = "#publications"
+  weight = 4
+
+[[menus.main]]
+  name = "Awards"
+  url = "#awards"
+  weight = 5
+
+[[menus.main]]
+  name = "Blog"
+  url = "/blog/"
+  weight = 6
+
+[[menus.main]]
+  name = "Contact"
+  url = "#contact"
+  weight = 7
