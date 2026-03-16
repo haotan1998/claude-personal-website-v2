@@ -331,7 +331,6 @@ strong {
   position: relative;
   z-index: 1;
   padding: 2rem;
-  animation: heroFadeIn 1s var(--ease) both;
 }
 
 @keyframes heroFadeIn {
@@ -346,6 +345,15 @@ strong {
   }
 }
 
+/* Staggered reveal — each element fades in sequentially */
+.hero__greeting,
+.hero__name,
+.hero__role,
+.hero__affiliation,
+.hero__actions {
+  animation: heroFadeIn 0.8s var(--ease) both;
+}
+
 .hero__greeting {
   font-family: var(--f-body);
   font-size: 0.8125rem;
@@ -354,6 +362,7 @@ strong {
   text-transform: uppercase;
   color: var(--c-accent);
   margin-bottom: 1rem;
+  animation-delay: 0s;
 }
 
 .hero__name {
@@ -364,6 +373,7 @@ strong {
   line-height: 1.1;
   margin-bottom: 1rem;
   letter-spacing: -0.02em;
+  animation-delay: 0.12s;
 }
 
 .hero__chinese {
@@ -379,6 +389,7 @@ strong {
   color: rgba(245, 241, 236, 0.7);
   font-weight: 400;
   margin-bottom: 0.25rem;
+  animation-delay: 0.24s;
 }
 
 .hero__affiliation {
@@ -387,6 +398,7 @@ strong {
   color: rgba(245, 241, 236, 0.45);
   font-weight: 300;
   margin-bottom: 2.5rem;
+  animation-delay: 0.36s;
 }
 
 .hero__actions {
@@ -394,6 +406,7 @@ strong {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  animation-delay: 0.48s;
 }
 
 .hero__actions> :first-child,
