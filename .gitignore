@@ -1,4 +1,25 @@
-/.DS_Store
-/.hugo_build.lock
+# Hugo build output
 /public/
-/resources/
+/resources/_gen/
+
+# Hugo lock file
+/.hugo_build.lock
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node (if using Hugo Pipes with npm)
+node_modules/
+package-lock.json
+
+# Environment & secrets
+.env
+.env.*
