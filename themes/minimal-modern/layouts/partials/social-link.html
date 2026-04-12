@@ -1,0 +1,10 @@
+{{- $social := .social -}}
+{{- $class := .class -}}
+{{- $showLabel := .showLabel | default false -}}
+{{- $size := .size | default 15 -}}
+{{- $isEmail := eq $social.icon "email" -}}
+
+<a href="{{ $social.url }}"{{ with $class }} class="{{ . }}"{{ end }}{{ if not $isEmail }} target="_blank" rel="noopener"{{ end }}{{ if not $showLabel }} aria-label="{{ $social.name }}"{{ end }}>
+  {{ partial "icon.html" (dict "name" $social.icon "size" $size) }}
+  {{ if $showLabel }}<span>{{ $social.name }}</span>{{ end }}
+</a>

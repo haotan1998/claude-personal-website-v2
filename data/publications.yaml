@@ -1,7 +1,6 @@
 - title: "RelativeNAS: Relative Neural Architecture Search via Slow-Fast Learning"
   authors: "<strong>Hao Tan</strong>, Ran Cheng, Shihua Huang, Cheng He, Changxiao Qiu, Fan Yang, Ping Luo"
   venue: "IEEE Transactions on Neural Networks and Learning Systems"
-  venue_short: "TNNLS"
   year: 2021
   type: "journal"
   paper_url: "https://pubmed.ncbi.nlm.nih.gov/34270436/"
@@ -10,7 +9,6 @@
 - title: "Efficient Evolutionary Neural Architecture Search by Modular Inheritable Crossover"
   authors: "Cheng He, <strong>Hao Tan</strong>, Shihua Huang, Ran Cheng"
   venue: "Swarm and Evolutionary Computation"
-  venue_short: "Swarm Evol. Comput."
   year: 2021
   type: "journal"
   paper_url: "https://www.sciencedirect.com/science/article/pii/S2210650221000559"
@@ -18,7 +16,6 @@
 - title: "Efficient Evolutionary Neural Architecture Search (NAS) by Modular Inheritable Crossover"
   authors: "<strong>Hao Tan</strong>, Cheng He, Dexuan Tang, Ran Cheng"
   venue: "International Conference on Bio-inspired Computing: Theories and Applications (BIC-TA)"
-  venue_short: "BIC-TA"
   year: 2019
   type: "conference"
   award: "Best Paper Award"
@@ -27,7 +24,6 @@
 - title: "A Neural Architecture Search Method and System Based on Evolutionary Learning"
   authors: "Ran Cheng, <strong>Hao Tan</strong>, Cheng He, Zhanglu Hou, Changxiao Qiu"
   venue: "International Patent · PCT/CN2020/136950"
-  venue_short: "Patent"
   year: 2022
   type: "patent"
   paper_url: "https://patents.google.com/patent/WO2022126448A1/zh"

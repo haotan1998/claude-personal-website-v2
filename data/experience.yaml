@@ -4,7 +4,3 @@
   location: "Shenzhen, China"
   period: "Jul 2020 – Jul 2021"
   description: "Developed neural architecture search algorithms, collaborated with industry partners on lightweight neural architectures for constrained chip hardware, and implemented evolutionary optimization pipelines in PyTorch."
-  focus:
-    - Neural Architecture Search
-    - Evolutionary Computation
-    - Efficient Deep Learning

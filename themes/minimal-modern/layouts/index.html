@@ -11,10 +11,7 @@
         <p class="hero__tagline">{{ .Site.Params.tagline }}</p>
         <div class="hero__links">
           {{ range .Site.Params.social }}
-          <a href="{{ .url }}" class="hero__link" {{ if ne .icon "email" }}target="_blank" rel="noopener" {{ end }}>
-            {{ partial "icon.html" (dict "name" .icon) }}
-            {{ .name }}
-          </a>
+          {{ partial "social-link.html" (dict "social" . "class" "hero__link" "showLabel" true) }}
           {{ end }}
         </div>
       </div>
@@ -48,7 +45,7 @@
 
     {{ range $type := $typeOrder }}
     {{ $items := where $pubs "type" $type }}
-    {{ if $items }}
+    {{ if gt (len $items) 0 }}
     <h3 class="pub-group__title">{{ index $typeLabels $type }}</h3>
     <div class="publications__list">
       {{ range $items }}

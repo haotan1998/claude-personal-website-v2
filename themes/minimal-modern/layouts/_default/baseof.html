@@ -71,10 +71,7 @@
         <ul class="footer__links">
           {{ range .Site.Params.social }}
           <li>
-            <a href="{{ .url }}" {{ if ne .icon "email" }}target="_blank" rel="noopener" {{ end }}
-              aria-label="{{ .name }}">
-              {{ partial "icon.html" (dict "name" .icon "size" 17) }}
-            </a>
+            {{ partial "social-link.html" (dict "social" . "size" 17) }}
           </li>
           {{ end }}
         </ul>
