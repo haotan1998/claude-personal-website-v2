@@ -57,11 +57,24 @@ function bindPublicationEntryState(entry, setActivePublicationEntry) {
   ['pointerup', 'pointercancel', 'pointerleave'].forEach(function (eventName) {
     entry.addEventListener(eventName, function (event) {
       entry.classList.remove('pub-entry--pressed');
-
-      if (eventName === 'pointerup' && event.pointerType !== 'mouse') {
-        setActivePublicationEntry(entry);
-      }
     });
+  });
+
+  entry.addEventListener('click', function () {
+    setActivePublicationEntry(entry);
+  });
+
+  entry.addEventListener('focusin', function () {
+    setActivePublicationEntry(entry);
+  });
+
+  entry.addEventListener('keydown', function (event) {
+    if (event.key !== 'Enter' && event.key !== ' ') {
+      return;
+    }
+
+    event.preventDefault();
+    setActivePublicationEntry(entry);
   });
 }
 
@@ -70,6 +83,7 @@ function bindActiveNavState(navLinks) {
     return;
   }
 
+  var nav = document.querySelector('.nav');
   var sections = [];
 
   navLinks.forEach(function (link) {
@@ -104,13 +118,12 @@ function bindActiveNavState(navLinks) {
   var ticking = false;
 
   function updateActiveSection() {
-    var nav = document.querySelector('.nav');
     var navOffset = nav ? nav.offsetHeight : 0;
-    var scrollAnchor = window.scrollY + navOffset + 32;
+    var anchorOffset = navOffset + 32;
     var activeId = sections[0].id;
 
     sections.forEach(function (item) {
-      if (item.section.offsetTop <= scrollAnchor) {
+      if (item.section.getBoundingClientRect().top <= anchorOffset) {
         activeId = item.id;
       }
     });
@@ -130,7 +143,10 @@ function bindActiveNavState(navLinks) {
 
   requestActiveSectionUpdate();
   window.addEventListener('scroll', requestActiveSectionUpdate, { passive: true });
+  window.addEventListener('touchmove', requestActiveSectionUpdate, { passive: true });
   window.addEventListener('resize', requestActiveSectionUpdate);
+  window.addEventListener('orientationchange', requestActiveSectionUpdate);
+  window.addEventListener('pageshow', requestActiveSectionUpdate);
 }
 
 function bindPublicationEntryDismiss(entries, setActivePublicationEntry) {
@@ -138,11 +154,7 @@ function bindPublicationEntryDismiss(entries, setActivePublicationEntry) {
     return;
   }
 
-  document.addEventListener('pointerdown', function (event) {
-    if (event.pointerType === 'mouse') {
-      return;
-    }
-
+  function clearEntryStateIfOutside(event) {
     var isInsideEntry = Array.prototype.some.call(entries, function (entry) {
       return entry.contains(event.target);
     });
@@ -150,5 +162,8 @@ function bindPublicationEntryDismiss(entries, setActivePublicationEntry) {
     if (!isInsideEntry) {
       setActivePublicationEntry(null);
     }
-  });
+  }
+
+  document.addEventListener('pointerdown', clearEntryStateIfOutside);
+  document.addEventListener('focusin', clearEntryStateIfOutside);
 }

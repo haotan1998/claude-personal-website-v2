@@ -12,7 +12,7 @@
         <div class="research-group__marker">{{ $group.label }}</div>
         <div class="research-group__entries">
           {{- range $items -}}
-          <article class="pub-entry">
+          <article class="pub-entry" tabindex="0">
             {{- if .award -}}
             <div class="pub-entry__meta">
               <span class="pub-entry__award">{{ .award }}</span>
