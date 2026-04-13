@@ -82,11 +82,11 @@ a:hover {
 }
 
 .nav__logo {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.1rem;
+  font-family: 'Songti SC', 'Noto Serif CJK SC', 'Source Han Serif SC', serif;
+  font-weight: 600;
+  font-size: 1.2rem;
   color: var(--color-text);
-  letter-spacing: -0.02em;
+  letter-spacing: 0.05em;
   border-bottom: none;
 }
 
