@@ -325,9 +325,17 @@ section+section {
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
+.pub-entry:focus-within,
+.pub-entry.pub-entry--pressed {
+  border-color: var(--color-border);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.04);
+}
+
+@media (hover: hover) {
 .pub-entry:hover {
   border-color: var(--color-border);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.04);
+}
 }
 
 /* Meta row: award badge */
@@ -399,6 +407,7 @@ section+section {
   transition: color 0.2s, border-color 0.2s, background 0.2s;
 }
 
+.pub-action:focus-visible,
 .pub-action:hover {
   color: var(--color-accent);
   border-color: var(--color-accent);
