@@ -8,7 +8,7 @@
   --color-accent-light: rgba(193, 68, 14, 0.08);
   --color-border: rgba(0, 0, 0, 0.08);
 
-  --font-body: 'Inter', system-ui, sans-serif;
+  --font-body: 'Source Serif 4', Georgia, serif;
   --font-display: 'Fraunces', Georgia, serif;
 
   --max-width: 860px;
@@ -82,12 +82,14 @@ a:hover {
 }
 
 .nav__logo {
-  font-family: 'Songti SC', 'Noto Serif CJK SC', 'Source Han Serif SC', serif;
-  font-weight: 600;
-  font-size: 1.2rem;
-  color: var(--color-text);
-  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
   border-bottom: none;
+}
+
+.nav__logo img {
+  height: 1.2rem;
+  width: auto;
 }
 
 .nav__links {
